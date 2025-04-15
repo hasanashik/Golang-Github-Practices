@@ -14,6 +14,6 @@ go run main.go
 
 ### output
 
-'''bash
+```
 hello world
-'''
+```
