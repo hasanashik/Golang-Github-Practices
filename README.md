@@ -48,4 +48,4 @@ run one of these at the command line to build to a certain OS:
 ## get puppy package
 
 go get github.com/hasanashik/puppy@latest
-go get github.com/hasanashik/puppy
+go get github.com/hasanashik/puppy@1.0.1
