@@ -20,7 +20,7 @@ go run .
 hello world
 ```
 
-### To Build the go program to binary
+# To Build the go program to binary
 
 ```
 go build
@@ -34,3 +34,18 @@ output
 ```
 hello world
 ```
+
+## Cross build/compile
+
+See Current OS architechture
+see environment variables
+■ go env GOARCH GOOS
+run one of these at the command line to build to a certain OS:
+■ GOOS=darwin go build
+■ GOOS=linux go build
+■ GOOS=windows go build
+
+## get puppy package
+
+go get github.com/hasanashik/puppy@latest
+go get github.com/hasanashik/puppy
