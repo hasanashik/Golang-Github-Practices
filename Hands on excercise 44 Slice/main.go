@@ -40,4 +40,22 @@ func main() {
 	fmt.Println("Capacity: ", cap(statesMake))
 	fmt.Println(statesMake)
 
+	// 	Hands-on exercise #48
+	// Create a slice of a slice of string ([][]string). Store the following data in the multi-dimensional
+	// slice:
+	// "James", "Bond", "Shaken, not stirred"
+	// "Miss", "Moneypenny", "I'm 008."
+	// Range over the records, then range over the data in each record.
+	sliceFirst := []string{"James", "Bond", "Shaken, not stirred"}
+	sliceSecond := []string{"Miss", "Moneypenny", "I'm 008."}
+	multiDimentionalSlice := [][]string{sliceFirst, sliceSecond}
+	for i, v := range multiDimentionalSlice {
+		fmt.Println(i, v)
+		fmt.Println("=====")
+		for a, b := range v {
+			fmt.Println(a, b)
+			fmt.Println("----")
+		}
+
+	}
 }
