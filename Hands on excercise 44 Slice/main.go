@@ -25,4 +25,19 @@ func main() {
 	mySlice = append(mySlice, y...)
 	fmt.Println(mySlice)
 
+	// excercise 46 delete from slice
+	x := []int{42, 43, 44, 45, 46, 47, 48, 49, 50, 51}
+	x = append(x[:3], x[6:]...)
+	fmt.Println(x)
+
+	// using make
+	states := []string{` Alabama`, ` Alaska`, ` Arizona`, ` Arkansas`, ` California`, ` Colorado`, ` Connecticut`, `Delaware`, ` Florida`, ` Georgia`, ` Hawaii`, ` Idaho`, ` Illinois`, ` Indiana`, ` Iowa`, ` Kansas`, `Kentucky`, ` Louisiana`, ` Maine`, ` Maryland`, ` Massachusetts`, ` Michigan`, ` Minnesota`, `Mississippi`, ` Missouri`, ` Montana`, ` Nebraska`, ` Nevada`, ` New Hampshire`, ` New Jersey`, ` New Mexico`, ` New York`, ` North Carolina`, ` North Dakota`, ` Ohio`, ` Oklahoma`, ` Oregon`, ` Pennsylvania`, ` Rhode Island`, ` South Carolina`, ` South Dakota`, ` Tennessee`, ` Texas`, `Utah`, ` Vermont`, ` Virginia`, ` Washington`, ` West Virginia`, ` Wisconsin`, ` Wyoming`}
+	statesMake := make([]string, 0, 50)
+	fmt.Println("Length: ", len(statesMake))
+	fmt.Println("Capacity: ", cap(statesMake))
+	statesMake = append(statesMake, states[:]...)
+	fmt.Println("Length: ", len(statesMake))
+	fmt.Println("Capacity: ", cap(statesMake))
+	fmt.Println(statesMake)
+
 }
