@@ -14,7 +14,8 @@ func main() {
 	zaman.fname = "Hasan"
 	zaman.lname = "Ashik"
 	zaman.febIceCreamFlavor = []string{"vanila", "chocolate"}
-	fmt.Printf("%#v", zaman, "\n")
+	fmt.Printf("%v", zaman)
+	fmt.Println("\n")
 
 	myMap := make(map[string][]string)
 	myMap[zaman.lname] = []string{"Hasan", "Ashik", "vanila", "chocolate"}
