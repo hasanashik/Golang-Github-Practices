@@ -92,16 +92,24 @@ func main() {
 		"investment", "securities,", "and", "they", "stood", "on", "my", "shelf", "in", "red",
 	}
 	myMap := make(map[string]int)
-	myMap["bond_james"] = 1
-	fmt.Println(myMap["bond_jamess"])
-	for _, v := range text {
-		for _, w := range text {
-			if v == w {
-				myMap[v]++
-			}
+	// myMap["bond_james"] = 1
+	// fmt.Println(myMap["bond_jamess"])
+	// for _, v := range text {
+	// 	for _, w := range text {
+	// 		if v == w {
+	// 			myMap[v]++
+	// 		}
 
-		}
-		fmt.Println(v, " exists ", myMap[v], " times.")
+	// 	}
+	// 	fmt.Println(v, " appeared ", myMap[v], " times.")
+	// }
+
+	// effective way
+	for _, v := range text {
+		myMap[v]++
+	}
+	for k, v := range myMap {
+		fmt.Println(k, v)
 	}
 
 }
