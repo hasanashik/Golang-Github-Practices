@@ -17,8 +17,14 @@ func main() {
 	fmt.Printf("%v", zaman)
 	fmt.Println("\n")
 
-	myMap := make(map[string][]string)
-	myMap[zaman.lname] = []string{"Hasan", "Ashik", "vanila", "chocolate"}
+	// second person
+	farid := person{fname: "farid", lname: "hossain", febIceCreamFlavor: []string{"mango", "chocolate"}}
+	fmt.Printf("%v", farid)
+	fmt.Println("\n")
+	myMap := map[string]person{
+		zaman.lname: zaman,
+		farid.lname: farid,
+	}
 	for _, v := range myMap {
 		fmt.Println(v)
 	}
