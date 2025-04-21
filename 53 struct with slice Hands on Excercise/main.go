@@ -14,6 +14,6 @@ func main() {
 	zaman.fname = "Hasan"
 	zaman.lname = "Ashik"
 	zaman.febIceCreamFlavor = "vanila"
-	fmt.Print("%#v", zaman)
+	fmt.Printf("%#v", zaman)
 
 }
