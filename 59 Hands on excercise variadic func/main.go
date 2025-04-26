@@ -6,6 +6,7 @@ import (
 
 func main() {
 	mySlice := []int{1, 2, 3, 4, 5}
+	defer fmt.Println("Defered: ", bar(mySlice))
 
 	fmt.Println(foo(mySlice...))
 
