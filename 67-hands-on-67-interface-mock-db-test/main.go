@@ -16,14 +16,14 @@ type mockDataStore struct {
 func (md mockDataStore) getUser(id int) (user, error) {
 	value, ok := md.users[id]
 	if !ok {
-		return user{}, fmt.Errorf("User does not exist with ID: ", id)
+		return user{}, fmt.Errorf("User does not exist with ID: %v", id)
 	}
 	return value, nil
 }
 func (md mockDataStore) saveUser(u user) error {
 	_, ok := md.users[u.id]
 	if ok {
-		return fmt.Errorf("User already exist with ID: ", u.id)
+		return fmt.Errorf("User already exist with ID: %v", u.id)
 	}
 	md.users[u.id] = u
 	return nil
